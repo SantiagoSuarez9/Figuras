@@ -27,6 +27,10 @@ public class App2 {
 
         Calcular_area2(figura);
 
+        figura = new Circulo();
+        ((Circulo)figura).setRadio(3f);
+        Calcular_area2(figura);
+
     }
 
     public static void Calcular_area2(Figuras f) {

@@ -2,6 +2,7 @@ package main.java.app;
 
 import main.java.modelo.Rectangulo;
 import main.java.modelo.TrianguloRectangulo;
+import main.java.modelo.Circulo;
 
 public class App {
     public static void main(String[] args) {
@@ -28,6 +29,13 @@ public class App {
 
         System.out.println("El area de este triángulo es: " + area);
 
+        //////////////////////////////////////////////////////////////
+
+        /*Calcular área del círculo*/
+        Circulo circ = new Circulo();
+        circ.setRadio(3f);
+        area = circ.calcular_area();
+        System.out.println("El area de este círculo es: " + area);
         //////////////////////////////////////////////////////////////
 
     }
