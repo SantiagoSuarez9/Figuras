@@ -96,7 +96,7 @@ class FigureCalculator {
         const configs = {
             rectangle: {
                 name: 'Rectángulo',
-                icon: '<i class="fas fa-square"></i>',
+                icon: '<div class="rectangle-icon"></div>',
                 inputs: [
                     { name: 'base', label: 'Base', unit: 'cm' },
                     { name: 'altura', label: 'Altura', unit: 'cm' }
@@ -106,7 +106,7 @@ class FigureCalculator {
             },
             triangle: {
                 name: 'Triángulo Rectángulo',
-                icon: '<i class="fas fa-play"></i>',
+                icon: '<div class="triangle-icon"></div>',
                 inputs: [
                     { name: 'base', label: 'Base', unit: 'cm' },
                     { name: 'altura', label: 'Altura', unit: 'cm' }

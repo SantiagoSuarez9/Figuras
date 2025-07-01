@@ -217,6 +217,39 @@ body {
     height: 100px;
 }
 
+/* Triángulo rectángulo personalizado */
+.triangle-icon {
+    width: 0;
+    height: 0;
+    border-left: 50px solid var(--primary-color);
+    border-bottom: 50px solid var(--primary-color);
+    border-top: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transition: var(--transition);
+}
+
+.figure-card:hover .triangle-icon {
+    border-left-color: var(--text-light);
+    border-bottom-color: var(--text-light);
+    transform: scale(1.1);
+}
+
+/* Rectángulo personalizado (más ancho que alto) */
+.rectangle-icon {
+    width: 90px;
+    height: 60px;
+    background: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.figure-card:hover .rectangle-icon {
+    background: var(--text-light);
+    border-color: var(--text-light);
+    transform: scale(1.1);
+}
+
 .figure-card:hover .figure-icon {
     color: var(--text-light);
     transform: scale(1.1);
