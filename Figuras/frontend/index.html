@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Figuras Geométricas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-shapes header-icon"></i>
+                <h1 class="main-title">Figuras Geométricas</h1>
+                <p class="subtitle">Calculadora de Áreas Interactiva</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Pantalla de inicio -->
+            <div id="home-screen" class="screen active">
+                <div class="welcome-card">
+                    <div class="welcome-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h2>¡Bienvenido!</h2>
+                    <p>Calcula el área de diferentes figuras geométricas de manera fácil y rápida</p>
+                    <button id="start-btn" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Elegir Figura
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pantalla de selección de figura -->
+            <div id="selection-screen" class="screen">
+                <div class="selection-container">
+                    <h2>Selecciona una Figura</h2>
+                    <div class="figures-grid">
+                        <div class="figure-card" data-figure="rectangle">
+                            <div class="figure-icon">
+                                <i class="fas fa-square"></i>
+                            </div>
+                            <h3>Rectángulo</h3>
+                            <p>Base × Altura</p>
+                        </div>
+                        <div class="figure-card" data-figure="triangle">
+                            <div class="figure-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <h3>Triángulo</h3>
+                            <p>(Base × Altura) ÷ 2</p>
+                        </div>
+                        <div class="figure-card" data-figure="circle">
+                            <div class="figure-icon">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                            <h3>Círculo</h3>
+                            <p>π × Radio²</p>
+                        </div>
+                    </div>
+                    <button id="back-to-home" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pantalla de cálculo -->
+            <div id="calculation-screen" class="screen">
+                <div class="calculation-container">
+                    <div class="calculation-header">
+                        <h2 id="calculation-title">Calculando Área</h2>
+                        <div id="selected-figure-icon" class="selected-icon"></div>
+                    </div>
+                    
+                    <form id="calculation-form" class="calculation-form">
+                        <div id="input-fields" class="input-fields">
+                            <!-- Los campos se generan dinámicamente -->
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" id="back-to-selection" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i>
+                                Volver
+                            </button>
+                            <button type="submit" id="calculate-btn" class="btn btn-primary">
+                                <i class="fas fa-calculator"></i>
+                                Calcular Área
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="error-message" class="error-message"></div>
+                </div>
+            </div>
+
+            <!-- Pantalla de resultado -->
+            <div id="result-screen" class="screen">
+                <div class="result-container">
+                    <div class="result-header">
+                        <h2>¡Resultado Calculado!</h2>
+                        <div class="result-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="result-content">
+                        <div class="figure-display">
+                            <div id="figure-drawing" class="figure-drawing">
+                                <!-- La figura se dibuja aquí -->
+                            </div>
+                        </div>
+                        
+                        <div class="result-info">
+                            <div class="result-card">
+                                <h3 id="result-figure-name">Figura</h3>
+                                <div id="result-dimensions" class="dimensions"></div>
+                                <div class="area-result">
+                                    <span class="area-label">El área es:</span>
+                                    <span id="area-value" class="area-value">0 cm²</span>
+                                </div>
+                                <div id="formula-display" class="formula"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-actions">
+                        <button id="new-calculation" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Nueva Calculación
+                        </button>
+                        <button id="modify-data" class="btn btn-secondary">
+                            <i class="fas fa-edit"></i>
+                            Modificar Datos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Calculadora de Figuras Geométricas</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

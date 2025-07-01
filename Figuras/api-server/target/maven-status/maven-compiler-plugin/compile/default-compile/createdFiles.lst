@@ -1,0 +1,11 @@
+com\figuras\model\Figura.class
+com\figuras\dto\CirculoRequest.class
+com\figuras\model\TrianguloRectangulo.class
+com\figuras\model\CalculadorArea.class
+com\figuras\model\Rectangulo.class
+com\figuras\model\Circulo.class
+com\figuras\dto\TrianguloRequest.class
+com\figuras\FigurasApiApplication.class
+com\figuras\controller\FigurasController.class
+com\figuras\dto\AreaResponse.class
+com\figuras\dto\RectanguloRequest.class
