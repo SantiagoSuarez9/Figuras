@@ -127,29 +127,61 @@ Figuras/
 
 ## 🏃‍♂️ Cómo Ejecutar
 
-### 🎯 Ejecución Principal (Recomendado)
+### 🪟 **Windows**
 
-#### 1️⃣ Iniciar la API REST
-```bash
+#### **1️⃣ Iniciar la API REST**
+```cmd
 cd api-server
 run-api.bat
-# O con Maven: mvn spring-boot:run
 ```
 
-#### 2️⃣ Abrir el Frontend
-```bash
+#### **2️⃣ Abrir el Frontend**
+```cmd
 # Abrir en navegador:
 frontend/index.html
-# O con live server en VS Code
 ```
 
-### 🌐 Endpoints de la API
+### 🐧 **Linux**
+
+#### **📋 Requisitos (primera vez):**
+```bash
+# Instalar dependencias
+sudo apt update
+sudo apt install openjdk-17-jdk maven python3
+
+# Hacer scripts ejecutables
+chmod +x run-project-linux.sh
+chmod +x api-server/run-api.sh
+chmod +x frontend/run-frontend.sh
+```
+
+#### **🚀 Ejecutar proyecto completo (recomendado):**
+```bash
+./run-project-linux.sh
+```
+
+#### **🔧 O ejecutar por separado:**
+```bash
+# Terminal 1 - API
+cd api-server && ./run-api.sh
+
+# Terminal 2 - Frontend  
+cd frontend && ./run-frontend.sh
+```
+
+### 🌐 **Acceso**
+- **🔧 API REST**: http://localhost:8080
+- **🌐 Frontend**: 
+  - Windows: Abrir `frontend/index.html`
+  - Linux: http://localhost:3000
+
+### 🌐 **Endpoints de la API**
 
 - **GET** `/api/rectangulo?base=5&altura=3` - Calcular área de rectángulo
 - **GET** `/api/triangulo?base=4&altura=6` - Calcular área de triángulo  
 - **GET** `/api/circulo?radio=2.5` - Calcular área de círculo
 
-### 🔍 Verificar API
+### 🔍 **Verificar API**
 
 ```bash
 # Probar endpoints directamente:
@@ -157,6 +189,8 @@ curl "http://localhost:8080/api/rectangulo?base=5&altura=3"
 curl "http://localhost:8080/api/triangulo?base=4&altura=6"
 curl "http://localhost:8080/api/circulo?radio=2.5"
 ```
+
+📖 **Para más detalles sobre Linux**: Ver [LINUX-README.md](LINUX-README.md)
 
 ## 🎨 Frontend - Características Destacadas
 
